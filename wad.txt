@@ -1,0 +1,441 @@
+ 
+1. MYCITY Webpage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MYCITY - Pune</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .landmark { margin: 10px; padding: 10px; border-radius: 5px;}
+    .sw { color: crimson; font-family: cursive; font-size: 1.5em;}
+    .ag { color: forestgreen; font-family: monospace; font-size: 1.3em;}
+    .fc { color: navy; font-family: serif; font-size: 1.2em;}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">MYCITY</a>
+  </nav>
+  <header class="text-center mt-4">
+    <h1 style="font-size:3em; color:navy;">Pune</h1>
+  </header>
+  <main class="container text-center">
+    <div class="landmark sw">Shaniwar Wada
+      <button class="btn btn-info btn-sm" onclick="showInfo('Shaniwar Wada')">Show Info</button>
+    </div>
+    <div class="landmark ag">Aga Khan Palace
+      <button class="btn btn-success btn-sm" onclick="showInfo('Aga Khan Palace')">Show Info</button>
+    </div>
+    <div class="landmark fc">Fergusson College
+      <button class="btn btn-primary btn-sm" onclick="showInfo('Fergusson College')">Show Info</button>
+    </div>
+    <img id="landmark-img" src="" alt="" style="max-width:300px;display:none;margin:20px auto;">
+    <p id="landmark-info"></p>
+  </main>
+  <footer class="bg-dark text-white text-center p-2 mt-5">
+    &copy; 2025 MYCITY Pune
+  </footer>
+  <script>
+    function showInfo(name) {
+      const info = {
+        "Shaniwar Wada": {
+          img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Shaniwar_Wada_Pune.jpg",
+          text: "Historic fortification in Pune, built in 1732."
+        },
+        "Aga Khan Palace": {
+          img: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Aga_Khan_Palace.jpg",
+          text: "Built in 1892, important landmark of Indian freedom movement."
+        },
+        "Fergusson College": {
+          img: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Fergusson_College_Main_Building.jpg",
+          text: "Prestigious college established in 1885."
+        }
+      };
+      document.getElementById('landmark-img').src = info[name].img;
+      document.getElementById('landmark-img').style.display = "block";
+      document.getElementById('landmark-info').textContent = info[name].text;
+    }
+  </script>
+</body>
+</html>
+
+ 
+2. College Portal Dashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Portal Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">College Portal</a>
+    <form class="form-inline ml-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </nav>
+  <div class="container mt-4">
+    <h2>Welcome to XYZ College Portal</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Announcements</div>
+          <div class="card-body">Exam schedule released!</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Events</div>
+          <div class="card-body">Tech Fest on 15th May</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">Quick Links</div>
+          <div class="card-body">
+            <a href="#">Library</a><br>
+            <a href="#">Results</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-primary text-white text-center p-2 mt-5">
+    &copy; 2025 XYZ College
+  </footer>
+</body>
+</html>
+
+ 
+3. E-commerce Dashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="#">ShopEasy</a>
+    <form class="form-inline ml-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search products">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </nav>
+  <div class="container mt-4">
+    <h2>Featured Products</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product">
+          <div class="card-body">
+            <h5 class="card-title">Smartphone</h5>
+            <p class="card-text">₹10,000</p>
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for more products -->
+    </div>
+  </div>
+  <footer class="bg-success text-white text-center p-2 mt-5">
+    &copy; 2025 ShopEasy
+  </footer>
+</body>
+</html>
+
+ 
+4. Air Flight Booking Dashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Booking Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">FlyNow</a>
+    <form class="form-inline ml-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search flights">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </nav>
+  <div class="container mt-4">
+    <h2>Book Your Flight</h2>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" placeholder="From">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" placeholder="To">
+        </div>
+        <div class="form-group col-md-4">
+          <input type="date" class="form-control">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-info">Search Flights</button>
+    </form>
+    <!-- Add table/cards for flight options -->
+  </div>
+  <footer class="bg-info text-white text-center p-2 mt-5">
+    &copy; 2025 FlyNow
+  </footer>
+</body>
+</html>
+
+ 
+5. Company Dashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <a class="navbar-brand" href="#">TechCorp</a>
+    <form class="form-inline ml-auto">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search employees">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </nav>
+  <div class="container mt-4">
+    <h2>Welcome to TechCorp Dashboard</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Employee List</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Amit Sharma</li>
+            <li class="list-group-item">Sneha Rao</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Company Stats</div>
+          <div class="card-body">
+            <p>Total Employees: 200</p>
+            <p>Ongoing Projects: 12</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-secondary text-white text-center p-2 mt-5">
+    &copy; 2025 TechCorp Pvt Ltd
+  </footer>
+</body>
+</html>
+
+ 
+For the rest (6–28), here are short templates/snippets. If you want a full code for any, just ask for its number!
+ 
+6. Medical Emergency Services Webpage
+<!-- Use Bootstrap for layout, images for services, navbar and footer as above -->
+<button onclick="window.location='contact.html'" class="btn btn-danger">Contact Us</button>
+
+ 
+7. Pet Care Webpage
+<!-- Similar to above, use images/icons for services, navbar, header/footer -->
+<button onclick="window.location='contact.html'" class="btn btn-primary">Contact Us</button>
+
+ 
+8. Water Falls in India Webpage
+<!-- Display images and headings, navbar, header/footer -->
+<button onclick="alert('Take train to Nashik, then taxi to Dudhsagar Falls')">How to reach</button>
+
+ 
+9. SPPU TE-IT Syllabus Structure
+<!-- Use Bootstrap cards for syllabus, button to expand/collapse details -->
+<button onclick="document.getElementById('syllabus').style.display='block'">Show Syllabus</button>
+<div id="syllabus" style="display:none">Detailed syllabus here...</div>
+
+ 
+10. Organic Farm Webpage
+<!-- Use images, headings, navbar, add animation with CSS/JS -->
+<button onclick="alert('Organic Veggies: ₹100/kg, Fruits: ₹120/kg')">Offers & Charges</button>
+
+ 
+11. Car Rental and Booking
+<!-- Cards for cars, navbar, button for offers, simple animation on hover -->
+<button onclick="alert('Sedan: ₹1000/day, SUV: ₹2000/day')">Offers & Charges</button>
+
+ 
+12. Renewable Energy (Solar)
+<!-- Images, headings, navbar, button for offers -->
+<button onclick="alert('Solar Panel Installation: ₹50,000')">Offers & Charges</button>
+
+ 
+13. All About Tennis
+<!-- Show images, buttons for players, button shows achievements -->
+<button onclick="alert('Achievements: 20 Grand Slams')">Roger Federer</button>
+
+ 
+14. Node.js + Express.js: Tourist Places
+// app.js
+const express = require('express');
+const app = express();
+app.use(express.static('public'));
+app.listen(3000, () => console.log('Server running on 3000'));
+
+// In public/index.html, use Bootstrap carousel for images
+
+ 
+15. Node.js + Express.js: Two Tables
+// app.js
+const express = require('express');
+const app = express();
+app.use(express.static('public'));
+app.listen(3000);
+// In public/index.html, use two <table> side by side with CSS
+
+ 
+16. JS Registration Form + Local Storage
+<form id="regForm">
+  <input name="fname" required>
+  <input name="lname" required>
+  <input type="date" name="dob" required>
+  <input type="radio" name="gender" value="M">M
+  <input type="radio" name="gender" value="F">F
+  <input name="mobile" pattern="\d{10}" required>
+  <input type="email" name="email" required>
+  <button type="submit">Register</button>
+</form>
+<script>
+  document.getElementById('regForm').onsubmit = function(e) {
+    e.preventDefault();
+    let data = Object.fromEntries(new FormData(this).entries());
+    let users = JSON.parse(localStorage.getItem('users') || '[]');
+    users.push(data);
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Registered!');
+  }
+</script>
+
+ 
+17. Hospital Management – Patient Registration
+<form id="patientForm">...</form>
+<p id="count"></p>
+<script>
+  let count = 0;
+  document.getElementById('patientForm').onsubmit = function(e) {
+    e.preventDefault();
+    count++;
+    document.getElementById('count').textContent = "Patients registered: " + count;
+  }
+</script>
+
+ 
+18. Real Estate Portal
+<!-- Cards for properties, address, price, contact us button -->
+<button onclick="window.location='contact.html'">Contact Us</button>
+
+ 
+19. jQuery Mobile Department Grid
+<!-- Use jQuery Mobile grid system, button for each department -->
+<div class="ui-grid-b">
+  <div class="ui-block-a"><a href="#dept1" class="ui-btn">CSE</a></div>
+  <!-- More blocks -->
+</div>
+
+ 
+20. jQuery Mobile Feedback with Flip Toggle
+<form>
+  <label for="flip">Are you satisfied?</label>
+  <select name="flip" id="flip" data-role="flipswitch">
+    <option value="no">No</option>
+    <option value="yes">Yes</option>
+  </select>
+</form>
+
+ 
+21. Angular App: Register/Login/Profile
+ng new userApp
+ng generate component register
+ng generate component login
+ng generate component profile
+# Use Angular forms and a service to store/display user data
+
+ 
+22. Node.js + Express + MongoDB: GET/PUT API
+// GET
+app.get('/admissions', async (req, res) => {
+  const data = await Admission.find();
+  res.json(data);
+});
+// PUT
+app.put('/admissions/:id', async (req, res) => {
+  const updated = await Admission.findByIdAndUpdate(req.params.id, req.body);
+  res.json(updated);
+});
+
+ 
+23. Node.js + Express + MongoDB: POST/DELETE API
+// POST
+app.post('/admissions', async (req, res) => {
+  const newAdmission = new Admission(req.body);
+  await newAdmission.save();
+  res.json(newAdmission);
+});
+// DELETE
+app.delete('/admissions/:id', async (req, res) => {
+  await Admission.findByIdAndDelete(req.params.id);
+  res.sendStatus(204);
+});
+
+ 
+24. jQuery Mobile Restaurant Menu
+<!-- Home page: list of menu items as buttons, on click go to details page -->
+<a href="#item1" class="ui-btn">Pizza</a>
+<!-- #item1 page shows details -->
+
+ 
+25. GitHub Version Control
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <repo-url>
+git push -u origin main
+
+ 
+26. GitHub Push, Pull, Branch, Merge
+git branch new-feature
+git checkout new-feature
+git add .
+git commit -m "Feature"
+git push
+git checkout main
+git merge new-feature
+git pull
+
+ 
+27. Docker Container
+# Dockerfile
+FROM node:18
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["node", "app.js"]
+
+docker build -t myapp .
+docker run -p 8080:3000 myapp
+
+ 
+28. Node.js Movie Ticket Booking
+const express = require('express');
+const app = express();
+app.use(express.static('public'));
+app.listen(3000, () => console.log('Running on 3000'));
+// public/index.html is your booking site
+
+ 
+If you need a complete, detailed code for any specific number, reply with the number(s) and I’ll give you the full code!
+⁂
